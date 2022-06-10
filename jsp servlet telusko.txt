@@ -168,3 +168,8 @@ classname --> jsp name will become servlet name demojsp
               if you just want to process, use servlet    
               
               whatever u write in <%= %> becomes out.print in the backend 
+              
+              JSPDirective itself has 3 types
+              @page - importing a package
+              @include - if u wnat to use jsp in ur jsp 
+              @taglib - eg if u want to use struts
