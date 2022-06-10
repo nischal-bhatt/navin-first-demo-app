@@ -1,0 +1,58 @@
+how does servlet works 
+
+client and a server machine 
+client sends a request to server, expecting a page 
+page can be static or dynamic --> static it means it is already made
+dynamic means it will be built at runtime 
+
+client sends request to server
+server has a file --> that file goes to client (request response done)
+
+
+but now lets say u r asking for a page that will be built at runtime
+client sends request to server, but server says hold on i dun have any page (server only has index.html for now)
+so u have to build that page
+request goes to a helper application (web container)
+in this web container, u will have servlet --> 
+
+
+servlet is basically a java file that can take requests from the client
+
+and it can process that request and it can provide u a response in the form of an html page
+
+
+
+servlet will process ur request (fetch the values) --> and it will send the html page
+client's request if it is dynamic it will go to web container (tomcat) 
+
+
+
+dynamic request goes to tomcat --> now tomcat says ive got a request, but that request
+is for abc.htm .. and we dont have that page.. we have to build it..
+that request goes to servlet (servlet will be a java class) 
+
+inside ur container --> u have a special file called deployment descriptor in which 
+u mention for which request which servlet should be called 
+each request will be mapped to a servlet 
+deployment descriptor (web.xml) 
+
+a servlet is a normal class which extends httpservlet (it will provide all the features u need)
+
+
+response will be in html format 
+
+
+we can use annotations on servlet --> to replace web.xml 
+
+===============
+
+eclipse setup and tour 
+
+IDE integrated development environment 
+Netbeans, eclipse, intellij
+
+eclipse u can use for free for web environments 
+
+
+
+
