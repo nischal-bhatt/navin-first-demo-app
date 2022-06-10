@@ -10,7 +10,7 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   
-  <servlet>
+  <!--  <servlet>
       <servlet-name>abc</servlet-name>
       <servlet-class>com.telusko.AddServlet</servlet-class>
   </servlet>
@@ -32,7 +32,7 @@
        <url-pattern>/sq</url-pattern>
   </servlet-mapping>
   
-  <!--  context-param is shared by all servlets -->
+   context-param is shared by all servlets
   <context-param>
       <param-name>name</param-name>
       <param-value>nish</param-value>
@@ -42,6 +42,6 @@
       <param-name>phone</param-name>
       <param-value>samsung</param-value>
   </context-param>
-  
+  -->
   
 </web-app>
