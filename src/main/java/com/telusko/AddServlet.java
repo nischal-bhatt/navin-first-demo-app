@@ -40,15 +40,21 @@ public class AddServlet extends HttpServlet{
 		
 		System.out.println("result is " + k);
 		
+		
+		res.sendRedirect("sq?k="+k); //this technique comes under URL Rewriting
+		//another way is session management
+				
+		
 		//PrintWriter out = res.getWriter();
 		
 		//out.println(k + " is the result");
 		
-		req.setAttribute("k", k);
+		//req.setAttribute("k", k);
 		
 		
-		RequestDispatcher rd = req.getRequestDispatcher("sq");
-		rd.forward(req, res);
+		//RequestDispatcher rd = req.getRequestDispatcher("sq");
+		//rd.forward(req, res);
+		
 		
 		
 	}

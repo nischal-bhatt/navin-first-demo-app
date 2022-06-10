@@ -54,5 +54,32 @@ Netbeans, eclipse, intellij
 eclipse u can use for free for web environments 
 
 
+HttpServletRequest -->  the input params must be put in an object going from client to server
+HttpServletResponse -->  response will be sent in an object(data, html tags, send a video) 
 
+response object will have all data which client needs (text, html, video) 
+u can specify what type of data u r sending back to the client
+
+
+we dont have to create HttpServletRequest and the response object (tomcat gives)
+you just have to specify the references and tomcat will give it to u
+and that is why when you want to run a web app u need a tomcat server
+
+
+calling a servlet from a servlet 
+
+if you want to call a servlet from a servlet and that the ending servlet resides on
+another website, then browser should be informed that he is getting redirected -> in this case 
+we have to use send redirect. with
+requestdispatcher, the client doesnt know about the redirection 
+
+therefore in send redirect --> 2 different requests are being sent 
+
+in requestdispatcher --> the same request object is forwarded to the other servlet
+
+
+in the case of send redirect, 
+lets say servlet 1 generates a variable x and it wants to send this to servlet y via 
+send redirect
+in this case, session management must be used 
 
