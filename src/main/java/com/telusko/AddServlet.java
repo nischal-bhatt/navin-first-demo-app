@@ -3,8 +3,8 @@ package com.telusko;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,8 +40,27 @@ public class AddServlet extends HttpServlet{
 		
 		System.out.println("result is " + k);
 		
+		//now lets maintain the data in the session
+		//whenever u go to a webapp.. it will maintain a session for u
+		// session is there throughout your visit 
 		
-		res.sendRedirect("sq?k="+k); //this technique comes under URL Rewriting
+		//put ur data into sessions
+		// once you put ur k in a session
+		// you can use k in your next servlet
+		
+		//HttpSession session = req.getSession();
+		//session.setAttribute("k",k);
+		
+		Cookie cookie = new Cookie("k",k + "");
+		res.addCookie(cookie);
+		
+		res.sendRedirect("sq");
+		
+		
+		
+		
+		//res.sendRedirect("sq?k="+k); 
+		//this technique comes under URL Rewriting
 		//another way is session management
 				
 		
