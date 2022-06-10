@@ -14,6 +14,9 @@
 <!--  with jsp, u dunt need to create the page in the servlet
 and u dun even need to use the servlet -->
     <% 
+    //request is an implicit object
+    //already provided by tomcat
+    //we jus need to create reference for it
     int i = Integer.parseInt(request.getParameter("num1")); 
     int j = Integer.parseInt(request.getParameter("num2")); 
     int k = i + j;
