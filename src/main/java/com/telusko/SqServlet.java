@@ -3,6 +3,7 @@ package com.telusko;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +32,15 @@ public class SqServlet extends HttpServlet {
 		k = k*k;
 		
 		PrintWriter out = res.getWriter();
-		out.println("square root is " + k);
+		out.println("square root is " + k + " hi<br> ");
+		
+		//ServletContext context =  getServletContext();
+		//String str = context.getInitParameter("name");
+		
+		ServletConfig ctx = getServletConfig();
+		String str = ctx.getInitParameter("name");
+		
+		out.println(str);
 	
 		System.out.println("sq called via send redirect");
 	}

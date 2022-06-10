@@ -83,3 +83,6 @@ lets say servlet 1 generates a variable x and it wants to send this to servlet y
 send redirect
 in this case, session management must be used 
 
+servletconfig - get the initial values of the servlet
+servletcontext -
+

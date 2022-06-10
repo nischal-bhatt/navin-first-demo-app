@@ -22,10 +22,26 @@
   <servlet>
       <servlet-name>pqr</servlet-name>
       <servlet-class>com.telusko.SqServlet</servlet-class>
+      <init-param>
+          <param-name>name</param-name>
+          <param-value>sukesh</param-value>
+      </init-param>
   </servlet>
   <servlet-mapping>
        <servlet-name>pqr</servlet-name>
        <url-pattern>/sq</url-pattern>
   </servlet-mapping>
+  
+  <!--  context-param is shared by all servlets -->
+  <context-param>
+      <param-name>name</param-name>
+      <param-value>nish</param-value>
+  </context-param>
+  
+   <context-param>
+      <param-name>phone</param-name>
+      <param-value>samsung</param-value>
+  </context-param>
+  
   
 </web-app>
