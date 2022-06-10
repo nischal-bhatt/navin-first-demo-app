@@ -28,6 +28,12 @@ and u dun even need to use the servlet -->
        int r = 23;
      %>
      
+     <%
+         pageContext.setAttribute("name","navin",PageContext.SESSION_SCOPE);
+         //that means this name attribute can be used in the entire session
+     %>
+     
+     
      my fav number is <%= r %>
 </body>
 </html>
