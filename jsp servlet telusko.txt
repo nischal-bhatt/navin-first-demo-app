@@ -86,3 +86,6 @@ in this case, session management must be used
 servletconfig - get the initial values of the servlet
 servletcontext -
 
+why we need jsp ? 
+what if we want to change the background color? --> if you want to send any tags, 
+tyou have to write out the entire tag.. refer to source code
