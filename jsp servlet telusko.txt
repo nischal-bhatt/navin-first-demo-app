@@ -159,4 +159,7 @@ classname --> jsp name will become servlet name demojsp
                                
               <%=  %>         
               the above will go inside out.print(k) in the 
-              corresponding servlet!        
+              corresponding servlet!   
+              
+              
+              basic idea is jsp gets converted into a servlet     
