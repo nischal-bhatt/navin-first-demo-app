@@ -89,3 +89,74 @@ servletcontext -
 why we need jsp ? 
 what if we want to change the background color? --> if you want to send any tags, 
 tyou have to write out the entire tag.. refer to source code
+
+as a programmer even if u write jsp code, that jsp code 
+gets converted into servlets 
+
+when u run the program, jsp gets converted to servlet 
+how is this happening ? 
+
+in jsp we have html tags
+below is example of jsp
+--------------------------------
+<html>
+<body>
+
+    <%
+       int i = Integer.parseInt(request.getParameter("t1"));
+       int j = same thing above
+       
+       int k = i+j;
+       
+       out.print(k);
+       
+    %>
+
+</body>
+
+</html>
+--------------------------------
+for servlet
+1. we have to create a class
+2. extend HttpServlet
+3. create method doGet
+4. pass 2 params
+5. create obj of printwriter
+--------------------------------
+
+run jsp 
+it will convert itself into a servlet
+classname --> jsp name will become servlet name demojsp
+              extend HttpServlet jsp will automatically do
+              request and response will be provided by tomcat
+              the <% %> (scriptlet) will be copied into the servlet
+              these are implicit objects in jsp 
+              whatever u write inside <% %> will go inside service method 
+              <%! 
+                 this section is declaration ! 
+                 whatevr u write inside here 
+                 will go inside declaration section of servlet!
+                 whatever u want inside class but outside of 
+                 service method will go into <%! %>
+              %>
+              
+              now lets say in jsp u want to import package
+              in servlet we just import coz its a java class
+              
+              in jsp how?
+              
+              for jsp --> we have 1 more tag
+              
+              directive
+              <%@page import = "java.util.Date" %>
+              
+              the above is for import!
+              
+              
+              so basically --> try to think of 
+                               jsp how it converts to a servlet
+                               
+                               
+              <%=  %>         
+              the above will go inside out.print(k) in the 
+              corresponding servlet!        
