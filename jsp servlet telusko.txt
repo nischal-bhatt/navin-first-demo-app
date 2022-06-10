@@ -165,4 +165,6 @@ classname --> jsp name will become servlet name demojsp
               basic idea is jsp gets converted into a servlet
               
               if u want to show a page, jsp is better
-              if you just want to process, use servlet     
+              if you just want to process, use servlet    
+              
+              whatever u write in <%= %> becomes out.print in the backend 
